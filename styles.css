@@ -1,0 +1,126 @@
+body{
+    background: linear-gradient(135deg, #ffe4e1 0%, #add8e6 100%);
+}
+
+#navbar{
+    justify-content:flex-end;
+    margin-left:auto;
+    display:flex;
+    gap:50px;
+    position: sticky;
+top: 0;
+background-color: #f4f1ec;
+z-index: 1000;
+padding:5px 20px;
+}
+.navlinks{
+    text-decoration:none;
+    color:black;
+}
+.btn{
+    color:black;
+    background-color:#f97316;
+}
+#heroimg{
+    width:100%;
+    height:65vh;
+}
+#horiz{
+    color:#1E3A8A;
+    width:100%;
+}
+.logo{
+    margin-right:auto;
+    height:40px;
+    width:auto;
+}
+#benefit{
+    text-align:center;
+}
+#subheading1{
+    color:#f59e0b;
+}
+.benefits-column {
+  max-width: 800px;          /* keeps it readable on large screens */
+  margin: 3rem auto;          /* space above and below section */
+  font-family: 'Montserrat', sans-serif;}
+
+.benefits-column h2 {
+  font-size: 36px;            /* large, striking heading */
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.benefits-column .subheading {
+  font-size: 18px;
+  font-weight: 400;
+  color: #4B5563;             /* dark gray for contrast under black heading */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.benefit-box {
+  width: 100%;                /* full width of container */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* text to the left */
+  padding: 2rem 2rem;         /* tall and spacious */
+  box-sizing: border-box;
+  color: white;
+  font-weight: 600;
+  font-size: 24px;            /* big enough to catch the eye */
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.benefit-box .icon {
+  margin-right: 1.5rem;
+  font-size: 32px;
+}
+
+.benefit-box:hover {
+  transform: scale(1.05);     /* subtle pop effect */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive for tablets and mobile */
+@media (max-width: 768px) {
+  .benefit-box {
+    font-size: 20px;
+    padding: 1.5rem 1.5rem;
+  }
+  .benefit-box .icon {
+    font-size: 28px;
+    margin-right: 1rem;
+  }
+}
+.benefit-section{
+    background-color:orange;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skill {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+#ski{
+  text-align:center;
+}
