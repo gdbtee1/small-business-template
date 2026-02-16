@@ -202,5 +202,13 @@ contactForm.addEventListener('submit', function(e) {
   });
 })();
 </script>
+<script>
+  const menuIcon = document.getElementById("menu-icon");
+  const navLinks = document.querySelector("#navbar .navlinks");
+
+  menuIcon.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
     </body>
 </html>

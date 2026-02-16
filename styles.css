@@ -110,11 +110,17 @@ padding:5px 20px;
     border-top: 1px solid rgba(0,0,0,0.1);
   }
 
-  /* Show nav links when active */
-  #navbar .navlinks.active {
-    display: block;
-  }
+  /* Mobile menu hidden by default */
+#navbar .navlinks {
+    max-height: 0;        /* hide menu */
+    overflow: hidden;     /* prevent scroll */
+    transition: max-height 0.3s ease; /* smooth slide down */
+}
 
+/* Show menu when active */
+#navbar .navlinks.active {
+    max-height: 500px;    /* adjust as needed to fit all links */
+}
   #navbar .navlinks .btn {
     width: 90%;
     margin: 0.5rem auto;
