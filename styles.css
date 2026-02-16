@@ -124,53 +124,58 @@ padding:5px 20px;
 #ski{
   text-align:center;
 }
-/* iPhone-specific mobile adjustments */
+/* ==========================
+   MOBILE MEDIA QUERY (PHONES)
+   Max-width 428px = all common phones
+   ========================== */
 @media (max-width: 428px) {
 
-  /* Navbar stacking */
-  #navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+  /* ----------------------------
+     Navbar adjustments
+     ---------------------------- */
+  #menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
   }
 
-  /* Nav items stack vertically */
-  .nav-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 0.5rem;
-  }
-
-  /* Links stretch full width for easier tap */
-  .navlinks {
+  /* Hide nav links by default */
+  #navbar .navlinks {
+    display: none;
     width: 100%;
     text-align: center;
+    margin: 0.5rem 0;
   }
 
-  /* Buttons full width */
-  .navlinks .btn {
+  /* Show nav links when active */
+  #navbar .navlinks.active {
+    display: block;
+  }
+
+  /* Buttons inside nav links full width */
+  #navbar .navlinks .btn {
     width: 100%;
     padding: 12px 0;
     font-size: 16px;
   }
 
-  /* Hero image scales */
+  /* ----------------------------
+     Hero image scaling
+     ---------------------------- */
   #heroimg {
     width: 100%;
     height: auto;
   }
 
-  /* Benefits boxes adjust */
+  /* ----------------------------
+     Benefits column
+     ---------------------------- */
   .benefit-box {
     font-size: 20px;
     padding: 1.25rem 1.5rem;
   }
 
-  /* Headings smaller */
+  /* Headings smaller on phones */
   h1 {
     font-size: 28px;
   }
@@ -178,68 +183,10 @@ padding:5px 20px;
     font-size: 24px;
   }
 
-  /* Padding for sections */
-  body, .benefits-column, .skills {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-/* Android / mobile phones */
-@media (max-width: 428px) {
-
-  /* Navbar stacking */
-  #navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  /* Nav items stacked vertically */
-  .nav-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 0.5rem;
-  }
-
-  /* Links full width for easy tap */
-  .navlinks {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Buttons full width */
-  .navlinks .btn {
-    width: 100%;
-    padding: 12px 0;
-    font-size: 16px;
-  }
-
-  /* Hero image scales */
-  #heroimg {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Benefits column adjustments */
-  .benefit-box {
-    font-size: 20px;
-    padding: 1.25rem 1.5rem;
-  }
-
-  /* Headings smaller */
-  h1 {
-    font-size: 28px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-
-  /* Padding for sections */
-  body, .benefits-column, .skills {
+  /* Section / body padding */
+  body,
+  .benefits-column,
+  .skills {
     padding-left: 1rem;
     padding-right: 1rem;
   }
