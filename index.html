@@ -5,6 +5,14 @@
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    <script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navLinks = document.querySelectorAll('#navbar .navlinks');
+
+  menuIcon.addEventListener('click', () => {
+    navLinks.forEach(link => link.classList.toggle('active'));
+  });
+</script>
     <body>
     <nav id="navbar">
       <div id="menu-icon">&#9776;</div> <!-- hamburger -->

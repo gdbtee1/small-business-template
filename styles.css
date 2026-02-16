@@ -191,3 +191,19 @@ padding:5px 20px;
     padding-right: 1rem;
   }
 }
+/* Mobile-only adjustment for benefit boxes */
+@media (max-width: 428px) {
+
+  .benefit-box {
+    flex-direction: row;       /* keep icon left of text */
+    justify-content: center;   /* center content horizontally on small screens */
+    text-align: center;        /* ensures wrapped text is centered */
+    gap: 1rem;                 /* consistent spacing between icon and text */
+    padding: 1.25rem 1.5rem;   /* keeps boxes nice and touch-friendly */
+  }
+
+  .benefit-box .icon {
+    flex-shrink: 0;           /* prevents icon from shrinking if text wraps */
+    font-size: 28px;          /* scale icon nicely for mobile */
+  }
+}
