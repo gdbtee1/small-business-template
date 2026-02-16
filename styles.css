@@ -85,97 +85,83 @@ padding:5px 20px;
   transform: scale(1.05);     /* subtle pop effect */
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-
-/* Responsive for tablets and mobile */
-@media (max-width: 768px) {
-  .benefit-box {
-    font-size: 20px;
-    padding: 1.5rem 1.5rem;
-  }
-  .benefit-box .icon {
-    font-size: 28px;
-    margin-right: 1rem;
-  }
-}
-.benefit-section{
-    background-color:orange;
-}
-
-/* SKILLS */
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.skill {
-    background-color: #ff7f50;
-    color: #fff;
-    padding: 0.75rem 1.25rem;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: transform 0.3s;
-}
-
-.skill:hover {
-    transform: scale(1.05);
-}
-#ski{
-  text-align:center;
-}
 /* ==========================
-   MOBILE MEDIA QUERY (PHONES)
-   Max-width 428px = all common phones
+   MOBILE NAV + PHONES
    ========================== */
 @media (max-width: 428px) {
 
-  /* ----------------------------
-     Navbar adjustments
-     ---------------------------- */
+  /* Hamburger icon */
   #menu-icon {
     display: block;
     font-size: 28px;
     cursor: pointer;
+    margin-left: auto;       /* push it to the right */
   }
 
-  /* Hide nav links by default */
+  /* Hide all nav links by default on mobile */
   #navbar .navlinks {
     display: none;
     width: 100%;
     text-align: center;
-    margin: 0.5rem 0;
+    padding: 12px 0;
+    background-color: #f4f1ec; /* match navbar background */
+    border-top: 1px solid rgba(0,0,0,0.1);
   }
 
-  /* Show nav links when active */
+  /* When active, links display vertically */
   #navbar .navlinks.active {
     display: block;
   }
 
-  /* Buttons inside nav links full width */
+  /* Buttons full width */
   #navbar .navlinks .btn {
-    width: 100%;
+    width: 90%;
+    margin: 0.5rem auto;
     padding: 12px 0;
     font-size: 16px;
   }
 
-  /* ----------------------------
-     Hero image scaling
-     ---------------------------- */
+  /* Flex adjustments for navbar */
+  #navbar {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  /* Hero image scaling */
   #heroimg {
     width: 100%;
     height: auto;
   }
 
-  /* ----------------------------
-     Benefits column
-     ---------------------------- */
+  /* Benefits boxes mobile adjustment */
   .benefit-box {
-    font-size: 20px;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
     padding: 1.25rem 1.5rem;
   }
 
-  /* Headings smaller on phones */
+  .benefit-box .icon {
+    flex-shrink: 0;
+    font-size: 28px;
+  }
+
+  /* Skills & Technologies mobile fix */
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .skill {
+    width: 90%;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+
+  /* Headings & padding adjustments */
   h1 {
     font-size: 28px;
   }
@@ -183,27 +169,10 @@ padding:5px 20px;
     font-size: 24px;
   }
 
-  /* Section / body padding */
   body,
   .benefits-column,
   .skills {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-}
-/* Mobile-only adjustment for benefit boxes */
-@media (max-width: 428px) {
-
-  .benefit-box {
-    flex-direction: row;       /* keep icon left of text */
-    justify-content: center;   /* center content horizontally on small screens */
-    text-align: center;        /* ensures wrapped text is centered */
-    gap: 1rem;                 /* consistent spacing between icon and text */
-    padding: 1.25rem 1.5rem;   /* keeps boxes nice and touch-friendly */
-  }
-
-  .benefit-box .icon {
-    flex-shrink: 0;           /* prevents icon from shrinking if text wraps */
-    font-size: 28px;          /* scale icon nicely for mobile */
   }
 }
