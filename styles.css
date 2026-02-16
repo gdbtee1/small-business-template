@@ -87,33 +87,33 @@ padding:5px 20px;
 }
 /* ==========================
    MOBILE NAV + PHONES
-   ========================== */
-@media (max-width: 428px) {
+ @media (max-width: 428px) {
 
-  /* Hamburger icon */
+  /* ----------------------------
+     Navbar hamburger menu
+     ---------------------------- */
   #menu-icon {
     display: block;
     font-size: 28px;
     cursor: pointer;
-    margin-left: auto;       /* push it to the right */
+    margin-left: auto; /* pushes hamburger to right */
   }
 
-  /* Hide all nav links by default on mobile */
+  /* Hide nav links by default */
   #navbar .navlinks {
     display: none;
     width: 100%;
     text-align: center;
     padding: 12px 0;
-    background-color: #f4f1ec; /* match navbar background */
+    background-color: #f4f1ec;
     border-top: 1px solid rgba(0,0,0,0.1);
   }
 
-  /* When active, links display vertically */
+  /* Show nav links when active */
   #navbar .navlinks.active {
     display: block;
   }
 
-  /* Buttons full width */
   #navbar .navlinks .btn {
     width: 90%;
     margin: 0.5rem auto;
@@ -121,19 +121,22 @@ padding:5px 20px;
     font-size: 16px;
   }
 
-  /* Flex adjustments for navbar */
   #navbar {
     flex-wrap: wrap;
     position: relative;
   }
 
-  /* Hero image scaling */
+  /* ----------------------------
+     Hero image scaling
+     ---------------------------- */
   #heroimg {
     width: 100%;
     height: auto;
   }
 
-  /* Benefits boxes mobile adjustment */
+  /* ----------------------------
+     Benefits boxes mobile adjustment
+     ---------------------------- */
   .benefit-box {
     flex-direction: row;
     justify-content: center;
@@ -147,7 +150,9 @@ padding:5px 20px;
     font-size: 28px;
   }
 
-  /* Skills & Technologies mobile fix */
+  /* ----------------------------
+     Skills & Technologies mobile fix
+     ---------------------------- */
   .skills-grid {
     display: flex;
     flex-direction: column;
@@ -161,7 +166,9 @@ padding:5px 20px;
     padding: 0.75rem 0;
   }
 
-  /* Headings & padding adjustments */
+  /* ----------------------------
+     Headings & padding adjustments
+     ---------------------------- */
   h1 {
     font-size: 28px;
   }
@@ -175,4 +182,3 @@ padding:5px 20px;
     padding-left: 1rem;
     padding-right: 1rem;
   }
-}
