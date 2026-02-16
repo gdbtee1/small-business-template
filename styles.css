@@ -90,25 +90,42 @@ padding:5px 20px;
  @media (max-width: 428px) { */
 
   /* ----------------------------
-     Navbar hamburger menu
-     ---------------------------- */
-     @media(max-width:500px) {
+   MOBILE NAVBAR / HAMBURGER MENU
+   ---------------------------- */
+@media(max-width:500px) {
+
+  /* Hamburger icon */
   #menu-icon {
     display: block;
     font-size: 28px;
     cursor: pointer;
-    margin-left: auto; /* pushes hamburger to right */
+    margin-left: auto; /* pushes it to the right */
   }
 
-#navbar .navlinks {
-    max-height: 0;
+  /* Hide nav links by default on mobile */
+  #navbar .navlinks {
+    max-height: 0;          /* hidden */
     overflow: hidden;
     transition: max-height 0.3s ease;
-}
+    width: 100%;
+    display: block;         /* block for stacking */
+    text-align: center;
+    padding: 0;             /* removed padding for hidden state */
+    background-color: #f4f1ec;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
 
-#navbar .navlinks.active {
-    max-height: 500px; /* or whatever is enough for all links */
-}
+  /* Each link styling inside dropdown */
+  #navbar .navlinks {
+    padding: 12px 0;        /* actual clickable area */
+  }
+
+  /* Show nav links when navbar has active class */
+  #navbar.active .navlinks {
+    max-height: 500px;      /* enough height to show all links */
+  }
+
+  /* Optional: style buttons inside navlinks */
   #navbar .navlinks .btn {
     width: 90%;
     margin: 0.5rem auto;
@@ -116,17 +133,10 @@ padding:5px 20px;
     font-size: 16px;
   }
 
+  /* Navbar layout adjustments */
   #navbar {
     flex-wrap: wrap;
     position: relative;
-  }
-
-  /* ----------------------------
-     Hero image scaling
-     ---------------------------- */
-  #heroimg {
-    width: 100%;
-    height: auto;
   }
 
   /* ----------------------------
